@@ -23,10 +23,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	offset = ft_strlen(dst);
 	if (size <= offset)
 		return (ft_strlen(src) + size);
-	while (*(src + cursor) && offset + cursor + 1 < size)
+	while (*(src + cursor) && offset + cursor < size - 1)
 	{
-		if (cursor < size - offset - 1)
-			*(dst + cursor + offset) = *(src + cursor);
+		*(dst + cursor + offset) = *(src + cursor);
 		cursor++;
 	}
 	*(dst + cursor + offset) = '\0';
