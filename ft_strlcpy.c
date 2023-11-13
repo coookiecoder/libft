@@ -21,8 +21,7 @@ int	ft_strlcpy(char *dst, const char *src, size_t size)
 		return (ft_strlen(src));
 	while (*(src + cursor) && cursor < size - 1)
 	{
-		if (cursor < size - 1)
-			*(dst + cursor) = *(src + cursor);
+		*(dst + cursor) = *(src + cursor);
 		cursor++;
 	}
 	*(dst + cursor) = '\0';
